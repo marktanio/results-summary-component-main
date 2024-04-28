@@ -1,76 +1,188 @@
-@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    font-family: 'Hanken Grotesk', sans-serif;
+    --lightRed:hsl(0, 100%, 67%);
+    --orangeyYellow: hsl(39, 100%, 56%);
+    --greenTeal: hsl(166, 100%, 37%);
+    --cobaltBlue: hsl(234, 85%, 45%);
+    --lightSlateBlue: hsl(252, 100%, 67%);
+    --lightRoyalBlue: hsl(241, 81%, 54%);
+    --violetBlue:hsla(256, 72%, 46%, 1);
+    --persianBlue:hsl(241, 72%, 46%);
+    --paleBlue:hsl(221, 100%, 96%);
+    --lightLavender:  hsl(241, 100%, 89%);
+    --darkGrayBlue: hsl(224, 30%, 27%);
+
+
+}
+
+p{
+    font-size: 18;
+}
 
 body{
-    font-family: "Hanken Grotesk", sans-serif;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+    background-color: var(--paleBlue);
 }
 
-.result-box{
-    width:375px;
-    height:500px;
-    background: linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%));
-    color: white;
+
+.result-card{
+    background-image: linear-gradient(var(--lightSlateBlue),var(--lightRoyalBlue));
+    padding:15px;
+    text-align: center;
     border-radius:20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    max-width: 275px;
+    position: absolute;
+    top: 23%;
+    left: 34%;
 }
 
-.average{
+.text-copy{
+    color:var(--lightLavender);
+}
+
+.circle{
+    background-image: linear-gradient(var(--violetBlue),var(--persianBlue));
     border-radius: 50%;
-    background:linear-gradient(hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
-    width: 150px;
-    height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    padding: 15px;
+    width:150px;
+    height:150px;
+    margin:auto;
 }
 
 h1{
-    font-weight: 800;
-    font-size: 50px;
-    margin: 0;
+    font-size: 55px;
+    font-weight:800;
+    color: white;
+    margin-bottom: -20px;
 }
 
-.total{
-    margin: 0;
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.7);
+.totalItems{
+    color: hsla(241, 100%, 89%, 0.5);
 }
 
-.description{
-    width: 300px;
-    text-align: center;
-    color: rgba(255, 255, 255, 0.7);
+.remarks{
+    color:white;
+    font-size: 30px;
+    margin-bottom: -5px;
 }
 
-.summary{
-    width:375px;
-    height:500px;
-    border-radius:20px;
-    border-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.eval{
+    padding: 0px 25px;
 }
 
 .summary{
-    color: hsl(224, 30%, 27%);
+    width: 250px;
+    background-color: white;
+    border-radius: 0 20px 20px 0;
+    padding: 15px 34px 15px 70px;
+    position:absolute;
+    top: 23%;
+    left: 48%;
+    z-index: -1;
 }
 
-.subject{
+.sumhdg,span{
+    color: var(--darkGrayBlue);
+}
+
+.category{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px;
-    background-color: gray;
+    background-color: bisque;
     border-radius: 10px;
-    width: 350px;
+    margin-bottom:7px;
+
+}
+
+img{
+    padding:5px 10px 5px 10px;
+}
+
+.score{
+    margin-left: auto;
+    padding-right:10px;
+    color:gray;
+    font-weight:bolder;
+}
+
+button{
+    font-size: 15px;
+    color:white;
+    background-color: var(--darkGrayBlue);
+    margin-top: 17px;
+    width:250px;
+    height:50px;
+    border-radius: 30px;
+    border:0;
+    margin-bottom: 30px;;
+
+}
+
+.red{
+    color:var(--lightRed);
+    background-color: hsla(0, 100%, 67%,0.1);
+}
+
+.yellow{
+    color:var(--orangeyYellow);
+    background-color: hsla(39, 100%, 56%,0.1);
+}
+
+.green{
+    color:var(--greenTeal);
+    background-color: hsla(166, 100%, 37%,0.1);
+}
+
+.violet{
+    color:var(--cobaltBlue);
+    background-color: hsla(234, 85%, 45%,0.1);
+}
+
+button:hover{
+    background-color: var(--violetBlue);
+}
+
+@media(max-width: 375px) {
+    
+    .result-card{
+        border-radius:0 0 30px 30px;
+        max-width: 375px;
+        position: absolute;
+        top:0;
+        left:0;
+        padding:20px;
+    }
+    .circle{
+        width:100px;
+        height:100px;
+    }
+    h1{
+        font-size: 55px;
+        font-weight:800;
+        color: white;
+        margin-bottom: -20px;
+        margin-top: 3px;
+    }
+    .remarks{
+        color:white;
+        font-size: 25px;
+        margin-bottom: -5px;
+    }
+
+    .summary{
+        width:375px;
+        background-color: white;
+        padding: 30px;
+        top:41%;
+        left:0;
+        border-radius: 0;;
+    }
+    .category{
+        margin-bottom:16px;
+        max-width: 315px;;
+    }
+
+    button{
+        font-size: 19px;
+        width:308px;
+    }
+
 }
