@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
-    font-family: 'Hanken Grotesk', sans-serif;
+:root{
     --lightRed:hsl(0, 100%, 67%);
     --orangeyYellow: hsl(39, 100%, 56%);
     --greenTeal: hsl(166, 100%, 37%);
@@ -13,28 +12,28 @@
     --paleBlue:hsl(221, 100%, 96%);
     --lightLavender:  hsl(241, 100%, 89%);
     --darkGrayBlue: hsl(224, 30%, 27%);
-
-
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 18px;
 }
 
 p{
     font-size: 18;
 }
 
-body{
+body {
     background-color: var(--paleBlue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
-.result-card{
-    background-image: linear-gradient(var(--lightSlateBlue),var(--lightRoyalBlue));
+.result-card {
+    background: linear-gradient(var(--lightSlateBlue),var(--lightRoyalBlue));
     padding:15px;
     text-align: center;
     border-radius:20px;
     max-width: 275px;
-    position: absolute;
-    top: 23%;
-    left: 34%;
 }
 
 .text-copy{
@@ -73,15 +72,15 @@ h1{
     padding: 0px 25px;
 }
 
-.summary{
+.summary {
     width: 250px;
     background-color: white;
     border-radius: 0 20px 20px 0;
     padding: 15px 34px 15px 70px;
-    position:absolute;
-    top: 23%;
-    left: 48%;
+    position:relative;
+    left: -40px;
     z-index: -1;
+    height: 418px;
 }
 
 .sumhdg,span{
@@ -146,47 +145,6 @@ button:hover{
 
 @media(max-width: 375px) {
     
-    .result-card{
-        border-radius:0 0 30px 30px;
-        max-width: 375px;
-        position: absolute;
-        top:0;
-        left:0;
-        padding:20px;
-    }
-    .circle{
-        width:100px;
-        height:100px;
-    }
-    h1{
-        font-size: 55px;
-        font-weight:800;
-        color: white;
-        margin-bottom: -20px;
-        margin-top: 3px;
-    }
-    .remarks{
-        color:white;
-        font-size: 25px;
-        margin-bottom: -5px;
-    }
 
-    .summary{
-        width:375px;
-        background-color: white;
-        padding: 30px;
-        top:41%;
-        left:0;
-        border-radius: 0;;
-    }
-    .category{
-        margin-bottom:16px;
-        max-width: 315px;;
-    }
-
-    button{
-        font-size: 19px;
-        width:308px;
-    }
 
 }
