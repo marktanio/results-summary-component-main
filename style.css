@@ -159,8 +159,53 @@ button:hover{
 }
 
 @media(max-width: 700px) {
-    .container{
+    .container {
         flex-direction:column;
         overflow: scroll;
+        justify-content: flex-start;
+    }
+
+    .summary {
+        width: 100%;
+        max-width: 307px;
+        background-color: var(--white);
+        border-radius: 0 0px 20px 20px;
+        padding: 0;
+        position:relative;
+        z-index: -1;
+        height: 453px;
+        top: -25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        left:0px;
+    }
+
+    .result-card {
+        background: linear-gradient(var(--lightSlateBlue),var(--lightRoyalBlue));
+        padding:15px;
+        text-align: center;
+        border-radius:20px;
+        width: 100%;
+        max-width: 275px;
+    }
+
+    .category {
+        display: flex;
+        border-radius: 10px;
+        margin-bottom:7px;
+        width: 100%;
+        max-width: 275px;
+    }
+
+    .sumhdg,span {
+        color: var(--darkGrayBlue);
+        margin-top: 45px;
+    }
+
+    img {
+        padding:5px 10px 5px 10px;
+        width: 30px;
     }
 }
