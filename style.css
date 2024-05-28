@@ -12,6 +12,13 @@
     --paleBlue:hsl(221, 100%, 96%);
     --lightLavender:  hsl(241, 100%, 89%);
     --darkGrayBlue: hsl(224, 30%, 27%);
+    --lightPeriwinkle: hsla(241, 100%, 89%, 0.5);
+    --white:hsl(0, 0%, 100%);
+    --bisque:hsl(33, 100%, 88%);
+    --lightTransparentRed: hsla(0, 100%, 67%,0.1);
+    --lightTransparentYellow : hsla(39, 100%, 56%,0.1);
+    --lightTransparentGreen: hsla(166, 100%, 37%,0.1);
+    --lightTransparentCobalt: hsla(234, 85%, 45%,0.1);
     font-family: 'Hanken Grotesk', sans-serif;
     font-size: 18px;
 }
@@ -22,7 +29,14 @@ p{
 
 body {
     background-color: var(--paleBlue);
-    display: flex;
+    overflow: hidden;
+}
+
+.container{
+    max-width:1920px;
+    width:100%;
+    height:100vh;
+    display:flex;
     align-items: center;
     justify-content: center;
 }
@@ -33,7 +47,7 @@ body {
     padding:15px;
     text-align: center;
     border-radius:20px;
-    max-width: 275px;
+    width: 275px;
 }
 
 .text-copy{
@@ -42,7 +56,7 @@ body {
 }
 
 .circle{
-    background-image: linear-gradient(var(--violetBlue),var(--persianBlue));
+    background: linear-gradient(var(--violetBlue),var(--persianBlue));
     border-radius: 50%;
     padding: 15px;
     width:150px;
@@ -53,16 +67,16 @@ body {
 h1{
     font-size: 55px;
     font-weight:800;
-    color: white;
+    color: var(--white);
     margin-bottom: -20px;
 }
 
 .totalItems{
-    color: hsla(241, 100%, 89%, 0.5);
+    color:var(--lightPeriwinkle);
 }
 
 .remarks{
-    color:white;
+    color:var(--white);
     font-size: 30px;
     margin-bottom: -5px;
     font-weight: bold;
@@ -73,8 +87,9 @@ h1{
 }
 
 .summary {
-    width: 250px;
-    background-color: white;
+    width: 100%;
+    max-width: 250px;
+    background-color: var(--white);
     border-radius: 0 20px 20px 0;
     padding: 15px 34px 15px 70px;
     position:relative;
@@ -89,7 +104,7 @@ h1{
 
 .category{
     display: flex;
-    background-color: bisque;
+    background-color: var(--bisque);
     border-radius: 10px;
     margin-bottom:7px;
 
@@ -108,7 +123,7 @@ img{
 
 button{
     font-size: 15px;
-    color:white;
+    color:var(--white);
     background-color: var(--darkGrayBlue);
     margin-top: 17px;
     width:250px;
@@ -121,30 +136,31 @@ button{
 
 .red{
     color:var(--lightRed);
-    background-color: hsla(0, 100%, 67%,0.1);
+    background-color: var(--lightTransparentRed);
 }
 
 .yellow{
     color:var(--orangeyYellow);
-    background-color: hsla(39, 100%, 56%,0.1);
+    background-color: var(--lightTransparentYellow);
 }
 
 .green{
     color:var(--greenTeal);
-    background-color: hsla(166, 100%, 37%,0.1);
+    background-color: var(--lightTransparentGreen);
 }
 
-.violet{
+.cobalt-blue{
     color:var(--cobaltBlue);
-    background-color: hsla(234, 85%, 45%,0.1);
+    background-color: var(--lightTransparentCobalt);
 }
 
 button:hover{
     background-color: var(--violetBlue);
 }
 
-@media(max-width: 375px) {
-    
-
-
+@media(max-width: 700px) {
+    .container{
+        flex-direction:column;
+        overflow: scroll;
+    }
 }
